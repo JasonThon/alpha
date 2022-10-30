@@ -1,5 +1,4 @@
-import { apiserver } from "../../proto/apiserver/apiserver";
-import { common } from "../../proto/common/stream";
+import { apiserver, common } from "../proto/apiserver";
 import ICreateDataflowOptions = apiserver.ICreateDataflowOptions;
 import CreateDataflowOptions = apiserver.CreateDataflowOptions;
 import Dataflow = common.Dataflow;

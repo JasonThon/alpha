@@ -1,4 +1,4 @@
-import { common } from "../../proto/common/stream";
+import { common } from "../proto/apiserver";
 import { injectFunctionName } from "../common/common";
 import IWindow = common.IWindow;
 import ISource = common.ISource;

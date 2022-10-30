@@ -1,5 +1,5 @@
 import { Sink } from "./definition";
-import { common } from "../../proto/common/stream";
+import { common } from "../proto/apiserver";
 import { injectFunctionName } from "../common/common";
 import ISink = common.ISink;
 

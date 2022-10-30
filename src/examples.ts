@@ -36,5 +36,4 @@ async function wordCount(ctx: ExecutionContext) {
     .execute();
 }
 
-// @ts-ignore
-await wordCount(ExecutionContext.new("wordCount", "default"));
+wordCount(ExecutionContext.new("wordCount", "default")).then();

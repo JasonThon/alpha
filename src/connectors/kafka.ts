@@ -1,5 +1,5 @@
 import { Source } from "./definition";
-import { common } from "../../proto/common/stream";
+import { common } from "../proto/apiserver";
 import ISource = common.ISource;
 import DataTypeEnum = common.DataTypeEnum;
 

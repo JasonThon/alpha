@@ -1,6 +1,6 @@
 import { Sink } from "./definition";
 import { injectFunctionName } from "../common/common";
-import { common } from "../../proto/common/stream";
+import { common } from "../proto/apiserver";
 import ISink = common.ISink;
 import IStatement = common.MysqlDesc.IStatement;
 import Extractor = common.MysqlDesc.Statement.Extractor;

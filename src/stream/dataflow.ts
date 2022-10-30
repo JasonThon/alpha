@@ -1,14 +1,15 @@
 import { ExecutionContext } from "./context";
 import { Filter, FlatMap, KeyBy, MapOp, Reduce, SinkOp } from "./operator";
-import { common } from "../../proto/common/stream";
+import { apiserver, common } from "../proto/apiserver";
 import { Sink } from "../connectors/definition";
-import { apiserver } from "../../proto/apiserver/apiserver";
-import { ApplicationJson, ApplicationStream, createResourceApiEndpoint, logger, POST } from "../common/consts";
+import { ApplicationStream, createResourceApiEndpoint, logger, POST } from "../common/consts";
+import { RequestInfo, RequestInit } from "node-fetch";
 import IWindow = common.IWindow;
 import CreateResourceRequest = apiserver.CreateResourceRequest;
 import ResourceTypeEnum = apiserver.ResourceTypeEnum;
 import CreateResourceResponse = apiserver.CreateResourceResponse;
 
+const fetch = (url: RequestInfo, init?: RequestInit) => import("node-fetch").then(module => module.default(url, init));
 
 export class Dataflow<T> {
   protected ctx: ExecutionContext;
@@ -44,13 +45,12 @@ export class Dataflow<T> {
     let request = new CreateResourceRequest();
     request.dataflow = options;
     request.resourceType = ResourceTypeEnum.RESOURCE_TYPE_ENUM_DATAFLOW;
-    request.name = this.ctx.name;
     request.namespace = this.ctx.namespace;
 
     await fetch(createResourceApiEndpoint, {
       method: POST,
       headers: { "Content-Type": ApplicationStream },
-      body: CreateResourceRequest.encode(request).finish()
+      body: Buffer.from(CreateResourceRequest.encode(request).finish())
     }).then((resp) => {
       if (resp.ok) {
         resp.arrayBuffer().then((buf) => {

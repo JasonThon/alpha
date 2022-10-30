@@ -1,5 +1,1046 @@
 import * as $protobuf from "protobufjs";
 import Long = require("long");
+/** Namespace proto. */
+export namespace apiserver {
+
+    /** Properties of a CreateResourceRequest. */
+    interface ICreateResourceRequest {
+
+        /** CreateResourceRequest namespace */
+        namespace?: (string|null);
+
+        /** CreateResourceRequest resourceType */
+        resourceType?: (apiserver.ResourceTypeEnum|null);
+
+        /** CreateResourceRequest dataflow */
+        dataflow?: (apiserver.ICreateDataflowOptions|null);
+    }
+
+    /** Represents a CreateResourceRequest. */
+    class CreateResourceRequest implements ICreateResourceRequest {
+
+        /**
+         * Constructs a new CreateResourceRequest.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.ICreateResourceRequest);
+
+        /** CreateResourceRequest namespace. */
+        public namespace: string;
+
+        /** CreateResourceRequest resourceType. */
+        public resourceType: apiserver.ResourceTypeEnum;
+
+        /** CreateResourceRequest dataflow. */
+        public dataflow?: (apiserver.ICreateDataflowOptions|null);
+
+        /** CreateResourceRequest options. */
+        public options?: "dataflow";
+
+        /**
+         * Creates a new CreateResourceRequest instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns CreateResourceRequest instance
+         */
+        public static create(properties?: apiserver.ICreateResourceRequest): apiserver.CreateResourceRequest;
+
+        /**
+         * Encodes the specified CreateResourceRequest message. Does not implicitly {@link apiserver.CreateResourceRequest.verify|verify} messages.
+         * @param message CreateResourceRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.ICreateResourceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified CreateResourceRequest message, length delimited. Does not implicitly {@link apiserver.CreateResourceRequest.verify|verify} messages.
+         * @param message CreateResourceRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.ICreateResourceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a CreateResourceRequest message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns CreateResourceRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.CreateResourceRequest;
+
+        /**
+         * Decodes a CreateResourceRequest message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns CreateResourceRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.CreateResourceRequest;
+
+        /**
+         * Verifies a CreateResourceRequest message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a CreateResourceRequest message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns CreateResourceRequest
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.CreateResourceRequest;
+
+        /**
+         * Creates a plain object from a CreateResourceRequest message. Also converts values to other types if specified.
+         * @param message CreateResourceRequest
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.CreateResourceRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this CreateResourceRequest to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for CreateResourceRequest
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a CreateResourceResponse. */
+    interface ICreateResourceResponse {
+
+        /** CreateResourceResponse status */
+        status?: (apiserver.ResourceStatusEnum|null);
+
+        /** CreateResourceResponse resourceId */
+        resourceId?: (common.IResourceId|null);
+
+        /** CreateResourceResponse errorMsg */
+        errorMsg?: (string|null);
+    }
+
+    /** Represents a CreateResourceResponse. */
+    class CreateResourceResponse implements ICreateResourceResponse {
+
+        /**
+         * Constructs a new CreateResourceResponse.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.ICreateResourceResponse);
+
+        /** CreateResourceResponse status. */
+        public status: apiserver.ResourceStatusEnum;
+
+        /** CreateResourceResponse resourceId. */
+        public resourceId?: (common.IResourceId|null);
+
+        /** CreateResourceResponse errorMsg. */
+        public errorMsg: string;
+
+        /**
+         * Creates a new CreateResourceResponse instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns CreateResourceResponse instance
+         */
+        public static create(properties?: apiserver.ICreateResourceResponse): apiserver.CreateResourceResponse;
+
+        /**
+         * Encodes the specified CreateResourceResponse message. Does not implicitly {@link apiserver.CreateResourceResponse.verify|verify} messages.
+         * @param message CreateResourceResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.ICreateResourceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified CreateResourceResponse message, length delimited. Does not implicitly {@link apiserver.CreateResourceResponse.verify|verify} messages.
+         * @param message CreateResourceResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.ICreateResourceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a CreateResourceResponse message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns CreateResourceResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.CreateResourceResponse;
+
+        /**
+         * Decodes a CreateResourceResponse message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns CreateResourceResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.CreateResourceResponse;
+
+        /**
+         * Verifies a CreateResourceResponse message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a CreateResourceResponse message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns CreateResourceResponse
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.CreateResourceResponse;
+
+        /**
+         * Creates a plain object from a CreateResourceResponse message. Also converts values to other types if specified.
+         * @param message CreateResourceResponse
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.CreateResourceResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this CreateResourceResponse to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for CreateResourceResponse
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** ResourceTypeEnum enum. */
+    enum ResourceTypeEnum {
+        RESOURCE_TYPE_ENUM_UNSPECIFIC = 0,
+        RESOURCE_TYPE_ENUM_DATAFLOW = 1
+    }
+
+    /** ResourceStatusEnum enum. */
+    enum ResourceStatusEnum {
+        RESOURCE_STATUS_ENUM_UNSPECIFIC = 0,
+        RESOURCE_STATUS_ENUM_STARTING = 1,
+        RESOURCE_STATUS_ENUM_RUNNING = 2,
+        RESOURCE_STATUS_ENUM_FAILURE = 3,
+        RESOURCE_STATUS_ENUM_STOPPING = 4,
+        RESOURCE_STATUS_ENUM_DELETED = 5
+    }
+
+    /** Properties of a CreateDataflowOptions. */
+    interface ICreateDataflowOptions {
+
+        /** CreateDataflowOptions dataflow */
+        dataflow?: (common.IDataflow|null);
+    }
+
+    /** Represents a CreateDataflowOptions. */
+    class CreateDataflowOptions implements ICreateDataflowOptions {
+
+        /**
+         * Constructs a new CreateDataflowOptions.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.ICreateDataflowOptions);
+
+        /** CreateDataflowOptions dataflow. */
+        public dataflow?: (common.IDataflow|null);
+
+        /**
+         * Creates a new CreateDataflowOptions instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns CreateDataflowOptions instance
+         */
+        public static create(properties?: apiserver.ICreateDataflowOptions): apiserver.CreateDataflowOptions;
+
+        /**
+         * Encodes the specified CreateDataflowOptions message. Does not implicitly {@link apiserver.CreateDataflowOptions.verify|verify} messages.
+         * @param message CreateDataflowOptions message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.ICreateDataflowOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified CreateDataflowOptions message, length delimited. Does not implicitly {@link apiserver.CreateDataflowOptions.verify|verify} messages.
+         * @param message CreateDataflowOptions message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.ICreateDataflowOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a CreateDataflowOptions message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns CreateDataflowOptions
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.CreateDataflowOptions;
+
+        /**
+         * Decodes a CreateDataflowOptions message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns CreateDataflowOptions
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.CreateDataflowOptions;
+
+        /**
+         * Verifies a CreateDataflowOptions message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a CreateDataflowOptions message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns CreateDataflowOptions
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.CreateDataflowOptions;
+
+        /**
+         * Creates a plain object from a CreateDataflowOptions message. Also converts values to other types if specified.
+         * @param message CreateDataflowOptions
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.CreateDataflowOptions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this CreateDataflowOptions to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for CreateDataflowOptions
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ListResourcesRequest. */
+    interface IListResourcesRequest {
+
+        /** ListResourcesRequest namespace */
+        namespace?: (string|null);
+
+        /** ListResourcesRequest resourceType */
+        resourceType?: (apiserver.ResourceTypeEnum|null);
+    }
+
+    /** Represents a ListResourcesRequest. */
+    class ListResourcesRequest implements IListResourcesRequest {
+
+        /**
+         * Constructs a new ListResourcesRequest.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.IListResourcesRequest);
+
+        /** ListResourcesRequest namespace. */
+        public namespace: string;
+
+        /** ListResourcesRequest resourceType. */
+        public resourceType: apiserver.ResourceTypeEnum;
+
+        /**
+         * Creates a new ListResourcesRequest instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ListResourcesRequest instance
+         */
+        public static create(properties?: apiserver.IListResourcesRequest): apiserver.ListResourcesRequest;
+
+        /**
+         * Encodes the specified ListResourcesRequest message. Does not implicitly {@link apiserver.ListResourcesRequest.verify|verify} messages.
+         * @param message ListResourcesRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.IListResourcesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ListResourcesRequest message, length delimited. Does not implicitly {@link apiserver.ListResourcesRequest.verify|verify} messages.
+         * @param message ListResourcesRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.IListResourcesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ListResourcesRequest message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ListResourcesRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.ListResourcesRequest;
+
+        /**
+         * Decodes a ListResourcesRequest message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ListResourcesRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.ListResourcesRequest;
+
+        /**
+         * Verifies a ListResourcesRequest message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ListResourcesRequest message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ListResourcesRequest
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.ListResourcesRequest;
+
+        /**
+         * Creates a plain object from a ListResourcesRequest message. Also converts values to other types if specified.
+         * @param message ListResourcesRequest
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.ListResourcesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ListResourcesRequest to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ListResourcesRequest
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ListResourcesResponse. */
+    interface IListResourcesResponse {
+
+        /** ListResourcesResponse resources */
+        resources?: (apiserver.IResource[]|null);
+    }
+
+    /** Represents a ListResourcesResponse. */
+    class ListResourcesResponse implements IListResourcesResponse {
+
+        /**
+         * Constructs a new ListResourcesResponse.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.IListResourcesResponse);
+
+        /** ListResourcesResponse resources. */
+        public resources: apiserver.IResource[];
+
+        /**
+         * Creates a new ListResourcesResponse instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ListResourcesResponse instance
+         */
+        public static create(properties?: apiserver.IListResourcesResponse): apiserver.ListResourcesResponse;
+
+        /**
+         * Encodes the specified ListResourcesResponse message. Does not implicitly {@link apiserver.ListResourcesResponse.verify|verify} messages.
+         * @param message ListResourcesResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.IListResourcesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ListResourcesResponse message, length delimited. Does not implicitly {@link apiserver.ListResourcesResponse.verify|verify} messages.
+         * @param message ListResourcesResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.IListResourcesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ListResourcesResponse message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ListResourcesResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.ListResourcesResponse;
+
+        /**
+         * Decodes a ListResourcesResponse message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ListResourcesResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.ListResourcesResponse;
+
+        /**
+         * Verifies a ListResourcesResponse message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ListResourcesResponse message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ListResourcesResponse
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.ListResourcesResponse;
+
+        /**
+         * Creates a plain object from a ListResourcesResponse message. Also converts values to other types if specified.
+         * @param message ListResourcesResponse
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.ListResourcesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ListResourcesResponse to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ListResourcesResponse
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a Resource. */
+    interface IResource {
+
+        /** Resource resourceId */
+        resourceId?: (common.IResourceId|null);
+
+        /** Resource resourceName */
+        resourceName?: (string|null);
+
+        /** Resource resourceType */
+        resourceType?: (apiserver.ResourceTypeEnum|null);
+
+        /** Resource status */
+        status?: (apiserver.ResourceStatusEnum|null);
+    }
+
+    /** Represents a Resource. */
+    class Resource implements IResource {
+
+        /**
+         * Constructs a new Resource.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.IResource);
+
+        /** Resource resourceId. */
+        public resourceId?: (common.IResourceId|null);
+
+        /** Resource resourceName. */
+        public resourceName: string;
+
+        /** Resource resourceType. */
+        public resourceType: apiserver.ResourceTypeEnum;
+
+        /** Resource status. */
+        public status: apiserver.ResourceStatusEnum;
+
+        /**
+         * Creates a new Resource instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns Resource instance
+         */
+        public static create(properties?: apiserver.IResource): apiserver.Resource;
+
+        /**
+         * Encodes the specified Resource message. Does not implicitly {@link apiserver.Resource.verify|verify} messages.
+         * @param message Resource message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.IResource, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified Resource message, length delimited. Does not implicitly {@link apiserver.Resource.verify|verify} messages.
+         * @param message Resource message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.IResource, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a Resource message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns Resource
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.Resource;
+
+        /**
+         * Decodes a Resource message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Resource
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.Resource;
+
+        /**
+         * Verifies a Resource message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a Resource message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns Resource
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.Resource;
+
+        /**
+         * Creates a plain object from a Resource message. Also converts values to other types if specified.
+         * @param message Resource
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.Resource, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this Resource to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for Resource
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a GetResourceRequest. */
+    interface IGetResourceRequest {
+
+        /** GetResourceRequest resourceId */
+        resourceId?: (common.IResourceId|null);
+    }
+
+    /** Represents a GetResourceRequest. */
+    class GetResourceRequest implements IGetResourceRequest {
+
+        /**
+         * Constructs a new GetResourceRequest.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.IGetResourceRequest);
+
+        /** GetResourceRequest resourceId. */
+        public resourceId?: (common.IResourceId|null);
+
+        /**
+         * Creates a new GetResourceRequest instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns GetResourceRequest instance
+         */
+        public static create(properties?: apiserver.IGetResourceRequest): apiserver.GetResourceRequest;
+
+        /**
+         * Encodes the specified GetResourceRequest message. Does not implicitly {@link apiserver.GetResourceRequest.verify|verify} messages.
+         * @param message GetResourceRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.IGetResourceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified GetResourceRequest message, length delimited. Does not implicitly {@link apiserver.GetResourceRequest.verify|verify} messages.
+         * @param message GetResourceRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.IGetResourceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a GetResourceRequest message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns GetResourceRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.GetResourceRequest;
+
+        /**
+         * Decodes a GetResourceRequest message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns GetResourceRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.GetResourceRequest;
+
+        /**
+         * Verifies a GetResourceRequest message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a GetResourceRequest message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns GetResourceRequest
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.GetResourceRequest;
+
+        /**
+         * Creates a plain object from a GetResourceRequest message. Also converts values to other types if specified.
+         * @param message GetResourceRequest
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.GetResourceRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this GetResourceRequest to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for GetResourceRequest
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a GetResourceResponse. */
+    interface IGetResourceResponse {
+
+        /** GetResourceResponse resource */
+        resource?: (apiserver.IResource|null);
+    }
+
+    /** Represents a GetResourceResponse. */
+    class GetResourceResponse implements IGetResourceResponse {
+
+        /**
+         * Constructs a new GetResourceResponse.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.IGetResourceResponse);
+
+        /** GetResourceResponse resource. */
+        public resource?: (apiserver.IResource|null);
+
+        /**
+         * Creates a new GetResourceResponse instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns GetResourceResponse instance
+         */
+        public static create(properties?: apiserver.IGetResourceResponse): apiserver.GetResourceResponse;
+
+        /**
+         * Encodes the specified GetResourceResponse message. Does not implicitly {@link apiserver.GetResourceResponse.verify|verify} messages.
+         * @param message GetResourceResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.IGetResourceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified GetResourceResponse message, length delimited. Does not implicitly {@link apiserver.GetResourceResponse.verify|verify} messages.
+         * @param message GetResourceResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.IGetResourceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a GetResourceResponse message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns GetResourceResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.GetResourceResponse;
+
+        /**
+         * Decodes a GetResourceResponse message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns GetResourceResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.GetResourceResponse;
+
+        /**
+         * Verifies a GetResourceResponse message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a GetResourceResponse message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns GetResourceResponse
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.GetResourceResponse;
+
+        /**
+         * Creates a plain object from a GetResourceResponse message. Also converts values to other types if specified.
+         * @param message GetResourceResponse
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.GetResourceResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this GetResourceResponse to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for GetResourceResponse
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a DeleteResourceRequest. */
+    interface IDeleteResourceRequest {
+
+        /** DeleteResourceRequest resourceId */
+        resourceId?: (common.IResourceId|null);
+    }
+
+    /** Represents a DeleteResourceRequest. */
+    class DeleteResourceRequest implements IDeleteResourceRequest {
+
+        /**
+         * Constructs a new DeleteResourceRequest.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.IDeleteResourceRequest);
+
+        /** DeleteResourceRequest resourceId. */
+        public resourceId?: (common.IResourceId|null);
+
+        /**
+         * Creates a new DeleteResourceRequest instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns DeleteResourceRequest instance
+         */
+        public static create(properties?: apiserver.IDeleteResourceRequest): apiserver.DeleteResourceRequest;
+
+        /**
+         * Encodes the specified DeleteResourceRequest message. Does not implicitly {@link apiserver.DeleteResourceRequest.verify|verify} messages.
+         * @param message DeleteResourceRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.IDeleteResourceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified DeleteResourceRequest message, length delimited. Does not implicitly {@link apiserver.DeleteResourceRequest.verify|verify} messages.
+         * @param message DeleteResourceRequest message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.IDeleteResourceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a DeleteResourceRequest message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns DeleteResourceRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.DeleteResourceRequest;
+
+        /**
+         * Decodes a DeleteResourceRequest message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns DeleteResourceRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.DeleteResourceRequest;
+
+        /**
+         * Verifies a DeleteResourceRequest message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a DeleteResourceRequest message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns DeleteResourceRequest
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.DeleteResourceRequest;
+
+        /**
+         * Creates a plain object from a DeleteResourceRequest message. Also converts values to other types if specified.
+         * @param message DeleteResourceRequest
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.DeleteResourceRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this DeleteResourceRequest to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for DeleteResourceRequest
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a DeleteResourceResponse. */
+    interface IDeleteResourceResponse {
+
+        /** DeleteResourceResponse resource */
+        resource?: (apiserver.IResource|null);
+    }
+
+    /** Represents a DeleteResourceResponse. */
+    class DeleteResourceResponse implements IDeleteResourceResponse {
+
+        /**
+         * Constructs a new DeleteResourceResponse.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: apiserver.IDeleteResourceResponse);
+
+        /** DeleteResourceResponse resource. */
+        public resource?: (apiserver.IResource|null);
+
+        /**
+         * Creates a new DeleteResourceResponse instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns DeleteResourceResponse instance
+         */
+        public static create(properties?: apiserver.IDeleteResourceResponse): apiserver.DeleteResourceResponse;
+
+        /**
+         * Encodes the specified DeleteResourceResponse message. Does not implicitly {@link apiserver.DeleteResourceResponse.verify|verify} messages.
+         * @param message DeleteResourceResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: apiserver.IDeleteResourceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified DeleteResourceResponse message, length delimited. Does not implicitly {@link apiserver.DeleteResourceResponse.verify|verify} messages.
+         * @param message DeleteResourceResponse message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: apiserver.IDeleteResourceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a DeleteResourceResponse message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns DeleteResourceResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): apiserver.DeleteResourceResponse;
+
+        /**
+         * Decodes a DeleteResourceResponse message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns DeleteResourceResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): apiserver.DeleteResourceResponse;
+
+        /**
+         * Verifies a DeleteResourceResponse message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a DeleteResourceResponse message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns DeleteResourceResponse
+         */
+        public static fromObject(object: { [k: string]: any }): apiserver.DeleteResourceResponse;
+
+        /**
+         * Creates a plain object from a DeleteResourceResponse message. Also converts values to other types if specified.
+         * @param message DeleteResourceResponse
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: apiserver.DeleteResourceResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this DeleteResourceResponse to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for DeleteResourceResponse
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+}
+
 /** Namespace common. */
 export namespace common {
 
@@ -2277,7 +3318,7 @@ export namespace common {
     interface IDataflow {
 
         /** Dataflow jobId */
-        jobId?: (common.IJobId|null);
+        jobId?: (common.IResourceId|null);
 
         /** Dataflow meta */
         meta?: (common.IDataflowMeta[]|null);
@@ -2296,7 +3337,7 @@ export namespace common {
         constructor(properties?: common.IDataflow);
 
         /** Dataflow jobId. */
-        public jobId?: (common.IJobId|null);
+        public jobId?: (common.IResourceId|null);
 
         /** Dataflow meta. */
         public meta: common.IDataflowMeta[];
@@ -3097,97 +4138,103 @@ export namespace common {
         }
     }
 
-    /** Properties of a JobId. */
-    interface IJobId {
+    /** Properties of a ResourceId. */
+    interface IResourceId {
 
-        /** JobId streamId */
-        streamId?: (number|null);
+        /** ResourceId resourceId */
+        resourceId?: (string|null);
+
+        /** ResourceId namespaceId */
+        namespaceId?: (string|null);
     }
 
     /** JobId, represents a stream job. */
-    class JobId implements IJobId {
+    class ResourceId implements IResourceId {
 
         /**
-         * Constructs a new JobId.
+         * Constructs a new ResourceId.
          * @param [properties] Properties to set
          */
-        constructor(properties?: common.IJobId);
+        constructor(properties?: common.IResourceId);
 
-        /** JobId streamId. */
-        public streamId: number;
+        /** ResourceId resourceId. */
+        public resourceId: string;
+
+        /** ResourceId namespaceId. */
+        public namespaceId: string;
 
         /**
-         * Creates a new JobId instance using the specified properties.
+         * Creates a new ResourceId instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns JobId instance
+         * @returns ResourceId instance
          */
-        public static create(properties?: common.IJobId): common.JobId;
+        public static create(properties?: common.IResourceId): common.ResourceId;
 
         /**
-         * Encodes the specified JobId message. Does not implicitly {@link common.JobId.verify|verify} messages.
-         * @param message JobId message or plain object to encode
+         * Encodes the specified ResourceId message. Does not implicitly {@link common.ResourceId.verify|verify} messages.
+         * @param message ResourceId message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: common.IJobId, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: common.IResourceId, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified JobId message, length delimited. Does not implicitly {@link common.JobId.verify|verify} messages.
-         * @param message JobId message or plain object to encode
+         * Encodes the specified ResourceId message, length delimited. Does not implicitly {@link common.ResourceId.verify|verify} messages.
+         * @param message ResourceId message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: common.IJobId, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: common.IResourceId, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a JobId message from the specified reader or buffer.
+         * Decodes a ResourceId message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns JobId
+         * @returns ResourceId
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): common.JobId;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): common.ResourceId;
 
         /**
-         * Decodes a JobId message from the specified reader or buffer, length delimited.
+         * Decodes a ResourceId message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns JobId
+         * @returns ResourceId
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): common.JobId;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): common.ResourceId;
 
         /**
-         * Verifies a JobId message.
+         * Verifies a ResourceId message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a JobId message from a plain object. Also converts values to their respective internal types.
+         * Creates a ResourceId message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns JobId
+         * @returns ResourceId
          */
-        public static fromObject(object: { [k: string]: any }): common.JobId;
+        public static fromObject(object: { [k: string]: any }): common.ResourceId;
 
         /**
-         * Creates a plain object from a JobId message. Also converts values to other types if specified.
-         * @param message JobId
+         * Creates a plain object from a ResourceId message. Also converts values to other types if specified.
+         * @param message ResourceId
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: common.JobId, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: common.ResourceId, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this JobId to JSON.
+         * Converts this ResourceId to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for JobId
+         * Gets the default type url for ResourceId
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
@@ -3398,118 +4445,6 @@ export namespace common {
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    /** Properties of a Sort. */
-    interface ISort {
-
-        /** Sort fieldName */
-        fieldName?: (string|null);
-
-        /** Sort type */
-        type?: (common.Sort.SortType|null);
-    }
-
-    /** Represents a Sort. */
-    class Sort implements ISort {
-
-        /**
-         * Constructs a new Sort.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: common.ISort);
-
-        /** Sort fieldName. */
-        public fieldName: string;
-
-        /** Sort type. */
-        public type: common.Sort.SortType;
-
-        /**
-         * Creates a new Sort instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns Sort instance
-         */
-        public static create(properties?: common.ISort): common.Sort;
-
-        /**
-         * Encodes the specified Sort message. Does not implicitly {@link common.Sort.verify|verify} messages.
-         * @param message Sort message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: common.ISort, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified Sort message, length delimited. Does not implicitly {@link common.Sort.verify|verify} messages.
-         * @param message Sort message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: common.ISort, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a Sort message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns Sort
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): common.Sort;
-
-        /**
-         * Decodes a Sort message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns Sort
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): common.Sort;
-
-        /**
-         * Verifies a Sort message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a Sort message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns Sort
-         */
-        public static fromObject(object: { [k: string]: any }): common.Sort;
-
-        /**
-         * Creates a plain object from a Sort message. Also converts values to other types if specified.
-         * @param message Sort
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: common.Sort, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this Sort to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for Sort
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace Sort {
-
-        /** SortType enum. */
-        enum SortType {
-            DESC = 0,
-            ASC = 1
-        }
     }
 
     /** DataTypeEnum enum. */
